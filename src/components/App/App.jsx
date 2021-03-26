@@ -1,7 +1,24 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import axios from 'axios';
 import './App.css';
 
 function App() {
+
+  useEffect(()=>{
+    console.log('in useEffect');
+    getGallery();
+  }, []);
+
+const getGallery = ()=>{
+  console.log('in getGallery');
+  axios.get('/gallery').then((response)=>{
+    console.log('back from GET with:', response);
+  }).catch((err)=>{
+    console.log(err);
+    alert('err');
+  })
+}
+
     return (
       <div className="App">
         <header className="App-header">
