@@ -4,7 +4,11 @@ function GalleryList(props){
     return(
         <>
         <h1>Gallery List</h1>
-        <p>{JSON.stringify(props)}</p>
+        <ul>
+            {props.photos.map((photo, index)=>
+                <GalleryItem photo={photo} key={index}/>
+            )}
+        </ul>
         <GalleryItem />
         </>
     )
