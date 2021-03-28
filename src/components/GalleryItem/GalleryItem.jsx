@@ -4,7 +4,7 @@ function GalleryItem(props){
     return(
         <>
         <img src={props.item.path} className="image"></img>
-        <div>DESCRIPTION: {props.item.description} LIKES: {props.item.likes}</div>
+        <div>DESCRIPTION: {props.item.description} <button>Like</button> {props.item.likes}</div>
         </>
     )
 }
