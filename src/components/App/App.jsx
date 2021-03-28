@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import './App.css';
 import GalleryList from '../GalleryList/GalleryList';
-import GalleryItem from '../GalleryItem/GalleryItem';
 
 function App() {
 const [photos, setPhotos] = useState([]);
@@ -28,7 +27,8 @@ const GetGallery = ()=>{
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
         <div className="gallery">
-        <GalleryList photos={photos}/>
+        <GalleryList photos={photos} likes={GetGallery}/>
+
         </div>
       </div>
     );
