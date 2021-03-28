@@ -36,7 +36,8 @@ function GalleryItem(props){
     return(
         <>
         <img src={props.item.path} className="image" onClick={toggleName}></img>
-        <div>{displayDescription()} <button onClick={GalleryLike}>Like</button> {props.item.likes} People like this! </div>
+        <div>{displayDescription()}</div>
+        <div><button onClick={GalleryLike}>Like</button> {props.item.likes} People like this! </div>
         </>
     )
 }
