@@ -4,11 +4,11 @@ function GalleryList(props){
     return(
         <>
         <h1>Gallery List</h1>
-        <ul>
+        <div>
           {props.photos.map((item, index)=>
               <GalleryItem item={item} key={index}/>
           )}  
-        </ul>
+        </div>
         </>
     )
 }

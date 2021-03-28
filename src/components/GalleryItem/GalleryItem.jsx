@@ -1,7 +1,8 @@
 function GalleryItem(props){
     return(
         <>
-        <li>{props.item.description}, {props.item.likes}</li>
+        <img src={props.item.path}></img>
+        <div>DESCRIPTION: {props.item.description} LIKES: {props.item.likes}</div>
         </>
     )
 }
